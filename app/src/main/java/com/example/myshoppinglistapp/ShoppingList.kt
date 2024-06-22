@@ -1,4 +1,4 @@
-package com.example.myshoppinglistapp.ui.theme
+package com.example.myshoppinglistapp
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
@@ -139,7 +139,7 @@ fun Shopping() {
 
 @Composable
 fun ShoppingListItem(
-    item:ShoppingItem,
+    item: ShoppingItem,
     onEditClick: () -> Unit,
     onDeleteClick: () -> Unit,
 ){
@@ -166,7 +166,7 @@ fun ShoppingListItem(
 }
 
 @Composable
-fun ShoppingItemEditor(item: ShoppingItem, onEditCompelte:(String,Int) -> Unit){
+fun ShoppingItemEditor(item: ShoppingItem, onEditCompelte:(String, Int) -> Unit){
     var editedName by remember {
         mutableStateOf(item.name)
     }
